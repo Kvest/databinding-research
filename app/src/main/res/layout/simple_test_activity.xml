@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
+        <import type="android.view.View"/>
+        <import type="android.text.TextUtils"/>
         <variable name="user" type="com.kvest.databindingresearch.datamodel.User" />
+        <variable name="userHandler" type="com.kvest.databindingresearch.datamodel.UserHandler" />
+        <variable name="counter" type="com.kvest.databindingresearch.datamodel.Counter" />
     </data>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="8dip">
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="@{TextUtils.isEmpty(user.firstName) ? View.GONE : View.VISIBLE}"
             android:text="@{user.firstName}"/>
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="@{TextUtils.isEmpty(user.lastName) ? View.GONE : View.VISIBLE}"
             android:text="@{user.lastName}"/>
+        <EditText
+            android:id="@+id/new_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New first name"/>
+        <EditText
+            android:id="@+id/new_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New last name"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{userHandler.onChange}"
+            android:text="Change"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{@string/count(counter.count)}"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{counter.increase}"
+            android:text="Inc"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{counter.decrease}"
+            android:text="Dec"/>
     </LinearLayout>
 </layout>

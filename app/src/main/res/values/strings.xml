@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DataBinding Research</string>
+    <string name="count">Count is %d</string>
 </resources>
