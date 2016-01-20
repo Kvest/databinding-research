@@ -40,7 +40,7 @@ public class SimpleTestActivity extends AppCompatActivity {
         binding.setImageUrl("http://i.imgur.com/DvpvklR.png");
     }
 
-    @BindingAdapter({"bind:imageUrl", "bind:error"})
+    @BindingAdapter(value={"imageUrl", "error"}, requireAll = true)
     public static void loadImage(ImageView imageView, String imageUrl, Drawable error) {
         Picasso.with(imageView.getContext()).load(imageUrl).error(error).into(imageView);
     }
