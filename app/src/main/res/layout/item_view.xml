@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="itemModel"
+            type="com.kvest.databindingresearch.datamodel.ItemModel" />
+    </data>
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dip">
+        <ImageView
+            android:id="@+id/image"
+            android:transitionName="image"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            app:imageUrl="@{itemModel.url}"
+            app:error="@{@drawable/error}"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:paddingLeft="4dip"
+            android:text="@{itemModel.title}"/>
+    </LinearLayout>
+</layout>

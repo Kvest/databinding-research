@@ -16,6 +16,8 @@
         </activity>
         <activity
             android:name=".ui.activity.SimpleTestActivity" />
+        <activity
+            android:name=".ui.activity.RecyclerViewTestActicity" />
     </application>
 
 </manifest>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="titleModel"
+            type="com.kvest.databindingresearch.datamodel.TitleModel" />
+    </data>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:background="#bbbbbb"
+        android:padding="4dip"
+        android:text="@{titleModel.title}"/>
+</layout>

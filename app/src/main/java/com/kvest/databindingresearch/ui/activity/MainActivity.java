@@ -25,5 +25,11 @@ public class MainActivity extends AppCompatActivity {
                 SimpleTestActivity.start(MainActivity.this);
             }
         });
+        findViewById(R.id.recyclerview_test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecyclerViewTestActicity.start(MainActivity.this);
+            }
+        });
     }
 }

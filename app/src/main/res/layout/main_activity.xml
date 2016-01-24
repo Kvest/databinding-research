@@ -8,4 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Simple test"/>
+    <Button
+        android:id="@+id/recyclerview_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView test"/>
 </LinearLayout>
