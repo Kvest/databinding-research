@@ -18,6 +18,8 @@
             android:name=".ui.activity.SimpleTestActivity" />
         <activity
             android:name=".ui.activity.RecyclerViewTestActicity" />
+        <activity
+            android:name=".ui.activity.OnActivityResultTestActivity" />
     </application>
 
 </manifest>
